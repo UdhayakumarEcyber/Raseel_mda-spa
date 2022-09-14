@@ -1,0 +1,302 @@
+.mda-spa-crud-component {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 40px;
+
+    @include breadcrumb();
+
+    & > .mda-spa-crud-component-list-container {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+        position: relative;
+        background-color: white;
+
+        & > .mda-spa-crud-component-list-container-default {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            & > .toolbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+
+                & > .left {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    a {
+                        text-decoration: none;
+                    }
+                    .uxp-button {
+                        padding-left: 10px;
+                        margin-right: 8px;
+                        font-size: 11px;
+
+                        & > .icon-placeholder {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+
+                & > .right {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    & > .search-form {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        padding: 0;
+                    }
+                }
+            }
+
+            & > .list-container {
+                width: 100%;
+                height: 100%;
+
+                & > .data-list-container {
+                    & > .data-list {
+                        & > .data-table {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                & > tr.data-list-item {
+                                    &.active {
+                                        // background: #f2f2f2;
+                                        // background: #49d8e82e;
+                                        background: #49d8e833;
+                                    }
+                                    td {
+                                        padding: 10px;
+                                        padding-top: 15px;
+                                        padding-bottom: 15px;
+
+                                        & > .mda-spa-crud-list-action-column {
+                                            a {
+                                                text-decoration: none;
+                                            }
+                                            .uxp-button {
+                                                margin-left: 5px;
+                                                text-decoration: none;
+                                                font-size: 10px;
+                                                padding: 6px 12px 6px 8px;
+
+                                                & > .icon-placeholder {
+                                                    width: 12px;
+                                                    height: 12px;
+                                                    margin-right: 8px;
+                                                }
+
+                                                &:first-child {
+                                                    margin-left: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .dl-loading-block {
+                            bottom: 40px;
+                        }
+                    }
+                }
+            }
+
+            &.has-toolbar {
+                padding-top: 80px;
+            }
+        }
+    }
+
+    & > .mda-spa-crud-add-view-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: white;
+        padding: 10px 20px;
+
+        & > .form-container {
+            & > form {
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                & > .uxp-form-group {
+                    width: 50%;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+
+                    &:nth-child(odd) {
+                        padding-right: 30px;
+                    }
+                    &:nth-child(even) {
+                        padding-left: 30px;
+                    }
+
+                    & > .uxp-form-label {
+                        width: 30%;
+                        min-width: 80px;
+                    }
+
+                    & > .uxp-input-container {
+                        width: 70%;
+                    }
+
+                    & > .uxp-form-select {
+                        flex-grow: 1;
+
+                        & > .uxp-select-placeholder > .selected {
+                            min-height: 13px
+                        }
+                    }
+
+                    &.buttons {
+                        width: 100%;
+                        justify-content: flex-end;
+
+                        .uxp-button {
+                            margin: 0 5px;
+                            &.btn-cancel,
+                            &.btn-submit,
+                            &.btn-confirm,
+                            &.btn-saving {
+                                padding-left: 40px;
+                                position: relative;
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 20px;
+                                    transform: translate(-50%, -50%);
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 50%;
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+
+                            &.btn-cancel {
+                                &:before {
+                                    background-image: url("../images/close-circle-outline.svg");
+                                    background-size: 70%;
+                                }
+                            }
+
+                            &.btn-submit {
+                                &:before {
+                                    background-image: url("../images/save-outline.svg");
+                                    background-size: 60%;
+                                }
+                            }
+
+                            &.btn-confirm {
+                                &:before {
+                                    background-image: url("../images/check-circle.svg");
+                                    background-size: 60%;
+                                }
+                            }
+
+                            &.btn-saving {
+                                @keyframes spin {
+                                    from {
+                                        transform: translate(-50%, -50%) rotate(0deg);
+                                    }
+                                    to {
+                                        transform: translate(-50%, -50%) rotate(360deg);
+                                    }
+                                }
+
+                                &:before {
+                                    background-image: url("../images/loading.svg");
+                                    background-size: 60%;
+                                    transform-origin: center;
+                                    animation: spin 500ms linear infinite;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.uxp-form-error {
+    width: 100%;
+    flex-shrink: 0;
+    height: auto;
+    padding: 10px;
+    font-size: 11px;
+    color: red;
+    text-align: right;
+}
+.data-list-container .data-list { 
+    width: 98%; 
+    background-color: white; 
+    margin: 0 0 0 1%; 
+}
+.data-list-container .data-list > .data-table tr {
+    border-bottom: 0px solid rgba(0, 0, 0, 0.12);
+    border-top: 0px solid rgba(0, 0, 0, 0.12); 
+}
+.data-list-container .data-list > .data-table thead tr th {
+    padding: 20px 15px;
+    font-size: 12px; 
+    top: 0px; 
+    background-color: #1a1f4f; 
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+.mda-spa-crud-component > .mda-spa-crud-component-list-container > .mda-spa-crud-component-list-container-default > .list-container > .data-list-container > .data-list > .data-table tbody > tr.data-list-item td {
+    padding: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.mda-spa-crud-component > .mda-spa-crud-component-list-container > .mda-spa-crud-component-list-container-default > .list-container > .data-list-container > .data-list > .data-table tbody > tr.data-list-item:nth-child(odd) td{
+    background-color: #daddf60a; 
+}
+.mda-spa-crud-component > .mda-spa-crud-component-list-container > .mda-spa-crud-component-list-container-default > .list-container > .data-list-container > .data-list > .data-table tbody > tr.data-list-item:nth-child(even) td{
+    background-color: #686fb114; 
+}
+// .mda-spa-crud-component > .mda-spa-crud-component-list-container > .mda-spa-crud-component-list-container-default > .list-container > .data-list-container > .data-list > .data-table tbody > tr.data-list-item:active{
+//     background-color: #f54; 
+// }
+
+.uxp-search-box-container .search-box-container{
+    border: 1px solid #1a1f4f;
+    border-radius: 0;
+    box-shadow: none;
+    background: #1a1f4f0a;
+    color: #000;
+}

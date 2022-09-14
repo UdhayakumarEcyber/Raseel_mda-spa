@@ -1,0 +1,37 @@
+{
+    "id": "987ce53e-1a84-404b-c302-bc7527935722",
+    "author": "",
+    "widgets": [
+        {
+            "id": "spa_web",
+            "name": "spa_web",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        }
+    ],
+    "sidebarLinks": [
+        {
+            "id": "spa_webLink",
+            "label": "",
+            "description": "",
+            "target": "",
+            "icon": "",
+            "roles":[]
+        }
+    ],
+    "uis": [
+        {
+            "id": "spa_webLink",
+            "label":"",
+            "description": "",
+            "roles": []
+        }
+    ],
+    "menuItems": [
+        {
+            "id": "spa_webLink",
+            "title": "spa_web"
+        }
+    ]
+}

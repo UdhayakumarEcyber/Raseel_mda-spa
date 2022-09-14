@@ -1,0 +1,45 @@
+// .modal-container {
+.mda-spa-web-popup-alert {
+    & > .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    & > .modal-panel {
+        min-width: 300px;
+        min-height: 150px;
+        max-width: 500px;
+        max-height: 350px;
+
+        & > .modal-header {
+            & > .modal-title {
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+        }
+
+        & > .modal-body {
+            margin: 0;
+
+            & > .mda-spa-web-confirm-popup {
+                width: 100%;
+                height: auto;
+
+                & > .message {
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+
+                & > .actions {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 0;
+                    & > .uxp-button {
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+// }

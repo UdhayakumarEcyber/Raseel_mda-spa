@@ -1,0 +1,290 @@
+$fileIcon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC43MyIgaGVpZ2h0PSIxNi4xMjQiIHZpZXdCb3g9IjAgMCAyMC43MyAxNi4xMjQiPjxkZWZzPjxzdHlsZT4uYXtvcGFjaXR5OjAuNTQ7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTcuMjc1LDE2LjA3di41NzZhMS43MjgsMS43MjgsMCwwLDEtMS43MjgsMS43MjhIMS43MjhBMS43MjgsMS43MjgsMCwwLDEsMCwxNi42NDZWNy40MzNBMS43MjgsMS43MjgsMCwwLDEsMS43MjgsNS43MDVIMi4zdjcuNDg2QTIuODgzLDIuODgzLDAsMCwwLDUuMTgzLDE2LjA3Wm0zLjQ1NS0yLjg3OVYzLjk3OEExLjcyOCwxLjcyOCwwLDAsMCwxOSwyLjI1SDUuMTgzQTEuNzI4LDEuNzI4LDAsMCwwLDMuNDU1LDMuOTc4djkuMjE0YTEuNzI4LDEuNzI4LDAsMCwwLDEuNzI4LDEuNzI4SDE5QTEuNzI4LDEuNzI4LDAsMCwwLDIwLjczLDEzLjE5MVpNOS4yMTQsNS43MDVBMS43MjgsMS43MjgsMCwxLDEsNy40ODYsMy45NzgsMS43MjgsMS43MjgsMCwwLDEsOS4yMTQsNS43MDVaTTUuNzU4LDEwLjg4OGwyLTJhLjQzMi40MzIsMCwwLDEsLjYxMSwwbDEuNDIyLDEuNDIyLDQuODc3LTQuODc3YS40MzIuNDMyLDAsMCwxLC42MTEsMGwzLjE1LDMuMTV2NC4wMzFINS43NThaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yLjI1KSIvPjwvc3ZnPg==";
+$uploadIcon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItdXBsb2FkLWNsb3VkIj48cG9seWxpbmUgcG9pbnRzPSIxNiAxNiAxMiAxMiA4IDE2Ij48L3BvbHlsaW5lPjxsaW5lIHgxPSIxMiIgeTE9IjEyIiB4Mj0iMTIiIHkyPSIyMSI+PC9saW5lPjxwYXRoIGQ9Ik0yMC4zOSAxOC4zOUE1IDUgMCAwIDAgMTggOWgtMS4yNkE4IDggMCAxIDAgMyAxNi4zIj48L3BhdGg+PHBvbHlsaW5lIHBvaW50cz0iMTYgMTYgMTIgMTIgOCAxNiI+PC9wb2x5bGluZT48L3N2Zz4=";
+
+.modal-container {
+    &.file-uploader {
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-panel {
+            min-width: 90%;
+            max-width: 90%;
+            min-height: 90%;
+            max-height: 90%;
+
+            .modal-body {
+                height: 99%;
+                margin-bottom: 0;
+
+                .image-uploader {
+                    width: 100%;
+                    height: 100%;
+                    padding-bottom: 80px;
+                    position: relative;
+
+                    .uploader {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #f6f6f6;
+                        border-radius: 10px;
+                        position: relative;
+                        z-index: 1;
+                        border: 2px dashed rgba(0, 0, 0, 0.12);
+                        overflow: hidden;
+
+                        .file-input {
+                            width: 100%;
+                            height: 100%;
+                            z-index: 1;
+                            opacity: 0;
+                        }
+
+                        .preview {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            padding: 10px;
+                            box-sizing: border-box;
+
+                            .preview-image {
+                                width: 100%;
+                                height: 100%;
+                                // object-fit: contain;
+                                background-color: transparent;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+
+                            .default-message {
+                                width: 100%;
+                                height: 100%;
+                                padding: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                box-sizing: border-box;
+
+                                .icon-cont {
+                                    width: 60px;
+                                    height: 40px;
+                                    background-color: transparent;
+
+                                    .icon {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url($fileIcon);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 60%;
+                                        filter: opacity(0.3);
+                                    }
+                                }
+
+                                .message {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 10px;
+                                    text-align: center;
+                                    font-size: 11px;
+                                    color: #424242;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            border-style: solid;
+                            .preview {
+                                &::before {
+                                    content: "Drag & Drop or Click";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.8);
+                                    color: white;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+
+                    .footer {
+                        width: 100%;
+                        height: 80px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 20px;
+
+                        .url-input {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+
+                            & > label {
+                                width: auto;
+                                height: auto;
+                                padding: 10px;
+                                padding-right: 20px;
+                                margin: 0;
+                            }
+
+                            .input-box {
+                                width: 400px;
+                                padding: 10px 0;
+                                box-sizing: border-box;
+
+                                .image-url-input {
+                                    width: 100%;
+                                    border-radius: 6px;
+                                    border: 1px solid rgba(0, 0, 0, 0.12);
+                                    background-color: white;
+                                    padding: 10px;
+                                    font-size: 11px;
+                                    box-sizing: border-box;
+                                    outline: none;
+                                }
+                            }
+                        }
+
+                        & > .upload-btn {
+                            margin: 0;
+                            padding-left: 50px;
+                            position: relative;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 30px;
+                                height: 30px;
+                                background-color: transparent;
+                                background-image: url($uploadIcon);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 50%;
+                            }
+
+                            &.active {
+                                background-color: #5752c9;
+                                color: white;
+
+                                &::before {
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .uxp-image-cropper {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    & > .crop-container {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 80px;
+
+                        .preview {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            padding: 10px;
+                            box-sizing: border-box;
+
+                            .preview-image {
+                                width: 100%;
+                                height: 100%;
+                                background-color: transparent;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    }
+
+                    & > .controls {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        .slider {
+                            height: auto;
+                            padding: 6px 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            & > label {
+                                margin: 0;
+                                padding-right: 20px;
+                            }
+                            & > .input-range {
+                                width: 200px;
+
+                                .input-range__label--min,
+                                .input-range__label--max,
+                                .input-range__label--value {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .action {
+                            width: auto;
+                            height: auto;
+                            padding: 6px 20px;
+
+                            & > .crop-btn {
+                                margin-right: 10px;
+                                background-color: #5752c9;
+                                color: white;
+                            }
+                        }
+
+                        &.cropped {
+                            & > .uxp-button {
+                                margin: 0;
+                                margin-right: 10px;
+
+                                &.cropper-btn {
+                                    background-color: #5752c9;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

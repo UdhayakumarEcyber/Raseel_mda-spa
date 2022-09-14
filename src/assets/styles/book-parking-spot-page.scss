@@ -1,0 +1,103 @@
+.page-content {
+    .book-parking-spot-page {
+        position: relative;
+        padding-top: 40px;
+
+        @include breadcrumb();
+
+        & > .section {
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &#heading-section {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: white;
+            }
+
+            .title {
+                margin-bottom: 3px;
+            }
+
+            .form-field-group {
+                display: flex;
+
+                & > .form-field {
+                    width: 33%;
+                }
+            }
+        }
+    }
+}
+
+.booking-details-modal {
+    justify-content: start;
+
+    .modal-panel {
+        min-width: 860px;
+        max-width: min-content;
+        min-height: 200px;
+        margin-top: 80px;
+        max-height: 650px;
+
+        & > .modal-body {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 2px;
+
+            .uxp-form-input {
+                font-family: "Comfortaa";
+            }
+
+            .uxp-form-select > .uxp-select-placeholder:not(.active) > div.selected {
+                color: #808080;
+            }
+
+            hr {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            & > .section {
+                padding-left: 15px;
+                padding-right: 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                .title {
+                    margin-bottom: 3px;
+                }
+
+                .form-field-group {
+                    display: flex;
+
+                    & > .form-field {
+                        flex-grow: 1;
+
+                        .occupied-spot-count,
+                        .available-spot-count {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .uxp-form-checkbox > label {
+                        padding: 0px;
+                    }
+                }
+
+                .controls {
+                    display: flex;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    justify-content: end;
+                    width: 100%;
+                    & > .form-field-controls {
+                        button.uxp-button {
+                            border-radius: 10px;
+                            justify-content: center;
+                            margin-left: 10px;
+                            padding: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

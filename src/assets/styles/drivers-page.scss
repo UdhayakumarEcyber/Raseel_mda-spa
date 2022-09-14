@@ -1,0 +1,267 @@
+.page-content {
+    position: relative;
+
+    .drivers-page {
+        @include breadcrumb();
+        & > .section {
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .title {
+                margin-bottom: 3px;
+            }
+        }
+    }
+}
+
+.vehicle-details-modal {
+
+    .modal-panel {
+        min-width: 70%;
+        min-height: 70%;
+        max-height: 85%;
+        max-width: 70%;
+
+        & > .modal-body {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            margin-bottom: 2px;
+
+            .uxp-form-input {
+                font-family: "Comfortaa";
+            }
+
+            .uxp-form-select > .uxp-select-placeholder:not(.active) > div.selected {
+                color: #808080;
+            }
+
+            hr {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .tab-control-bar {
+                width: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                background: #f0f0f0;
+
+                & > .tab-control-button {
+                    border-radius: 0px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    font-size: 12px;
+
+                    &.active {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .tab-panel {
+                & > .title {
+                    padding-left: 30px;
+                    margin-bottom: 0px;
+                    margin-top: 30px;
+                }
+
+                & > .section {
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+
+                    .search-control-panel {
+                        width: 100%;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                        & > .search-form-field {
+                            display: flex;
+                            width: 100%;
+
+                            & > .search-input {
+                                width: 300px;
+                            }
+
+                            & > .search-button {
+                                border-radius: 8px;
+                                margin-left: 10px;
+                                margin-top: 0px;
+                                margin-bottom: 0px;
+                                & > .icon-placeholder {
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+
+                    .form-field-group {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & > .form-field {
+                            width: 33%;
+                            &.full-width {
+                                width: 100%;
+                            }
+                        }
+
+                        .uxp-form-checkbox > label {
+                            padding: 0px;
+                        }
+                    }
+
+                    .controls {
+                        display: flex;
+                        border-top: 1px solid rgba(0, 0, 0, 0.1);
+                        justify-content: end;
+                        width: 100%;
+                        & > .form-field-controls {
+                            button.uxp-button {
+                                border-radius: 10px;
+                                justify-content: center;
+                                margin-left: 10px;
+                                padding: 12px;
+                            }
+                        }
+                    }
+
+                    &.vehicle-card-section {
+                        padding: 15px;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & > .vehicle-card-wrapper {
+                            padding: 8px;
+                            width: 20%;
+                            & > .vehicle-card {
+                                box-shadow: 0 0 8px 2px #d0d0d0;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                border-radius: 20px;
+                                background: #fff;
+                                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+                                transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow,
+                                    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+                                cursor: pointer;
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+                                }
+
+                                & > .title {
+                                    padding-top: 10px;
+                                    & > .info {
+                                        padding: 8px;
+                                        text-transform: uppercase;
+                                    }
+                                }
+
+                                & > .body {
+                                    padding: 8px;
+                                    margin-top: 4px;
+                                    display: flex;
+                                    background: #fafafa;
+
+                                    .tooltip {
+                                        width: 100%;
+                                    }
+
+                                    .only-icon-button {
+                                        padding: 6px 10px;
+                                        justify-content: center;
+                                        & > .icon-placeholder {
+                                            width: 16px;
+                                            height: 16px;
+                                            margin-right: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .vehicle-details-panel {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        justify-content: center;
+
+                        .controls {
+                            display: flex;
+                            border-top: 1px solid rgba(0, 0, 0, 0.1);
+                            justify-content: end;
+                            width: 100%;
+                            & > .form-field-controls {
+                                button.uxp-button {
+                                    border-radius: 10px;
+                                    justify-content: center;
+                                    margin-left: 10px;
+                                    padding: 12px;
+                                }
+                            }
+                        }
+
+                        table {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                            width: 100%;
+                            & > tbody {
+                                td {
+                                    padding: 10px;
+                                    padding-top: 14px;
+                                    padding-bottom: 14px;
+                                    text-align: left;
+                                    border: none;
+                                }
+
+                                tr {
+                                    & > td:first-child {
+                                        text-align: right;
+                                        font-weight: 600;
+                                    }
+                                }
+
+                                & > tr:nth-child(odd) {
+                                    background: #f9f9f9;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .control-panel {
+                    display: flex;
+                    justify-content: end;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                    .control-panel-field {
+                        margin-right: 35px;
+                        button {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.uxp-item-list-card.vehicle-information-card {
+    .vehicle-field {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        & > .label {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        & > .value {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

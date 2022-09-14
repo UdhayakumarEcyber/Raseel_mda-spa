@@ -1,0 +1,23 @@
+// let's create some variables here and use them in the styles
+$sidebar-width: 250px;
+$sidebar-item-text-color-active: #424242;
+$sidebar-item-text-color: white;
+$sidebar-item-background-color: transparent;
+$sidebar-item-background-color-active: #4cd8f9;
+$sidebar-background-color: #171B7A;
+
+$profile-icon-background-color: #171B7A;
+
+// #424242
+@mixin GrayFilterForSVG {
+    filter: saturate(100%) brightness(0%) invert(24%) sepia(0%) saturate(689%) hue-rotate(266deg) brightness(94%)
+        contrast(87%);
+}
+
+@mixin WhiteFilterForSVG {
+    filter: saturate(100%) brightness(0%) invert(100%);
+}
+
+
+$unhappyFace: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2My4yNTIiIGhlaWdodD0iNjMuMjUyIiB2aWV3Qm94PSIwIDAgNjMuMjUyIDYzLjI1MiI+PGRlZnM+PHN0eWxlPi5he29wYWNpdHk6MC41NDt9LmJ7ZmlsbDpub25lO3N0cm9rZTojNzA3MDcwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDoycHg7fTwvc3R5bGU+PC9kZWZzPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNjkzIC04MTguNzQ4KSI+PHBhdGggY2xhc3M9ImEiIGQ9Ik0zNC41OTUsM0EzMS42MjYsMzEuNjI2LDAsMSwwLDY2LjI1MiwzNC42MjYsMzEuNjExLDMxLjYxMSwwLDAsMCwzNC41OTUsM1ptLjAzMiw1Ni45MjdhMjUuMywyNS4zLDAsMSwxLDI1LjMtMjUuM0EyNS4yOTQsMjUuMjk0LDAsMCwxLDM0LjYyNiw1OS45MjdaTTQ1LjcsNDIuMTU0YTQuNzQ0LDQuNzQ0LDAsMSwwLTQuNzQ0LTQuNzQ0QTQuNzM4LDQuNzM4LDAsMCwwLDQ1LjcsNDIuMTU0Wm0tMjIuMTM4LDBhNC43NDQsNC43NDQsMCwxLDAtNC43NDQtNC43NDRBNC43MzgsNC43MzgsMCwwLDAsMjMuNTU3LDQyLjE1NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OTAgODE1Ljc0OCkiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTI3OTUuMzU0LDQ4ODkuMDU1bDEwLjM2MS00LjA2MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNzEuNjM1IC00MDIzLjM4NCkiLz48L2c+PC9zdmc+";
+

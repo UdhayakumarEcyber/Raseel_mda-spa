@@ -1,0 +1,93 @@
+.page-content {
+    .parking-records-page {
+        position: relative;
+        padding-top: 40px;
+
+        @include breadcrumb();
+
+        & > .section {
+            &#parking-spot-section {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: white;
+                position: relative;
+
+                .filters-section {
+                    display: flex;
+                    position: absolute;
+                    right: 20px;
+                    top: 0px;
+                    align-items: center;
+
+                    .label {
+                        margin-bottom: 0px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .title {
+                margin-bottom: 3px;
+            }
+
+            .form-field-group {
+                display: flex;
+                flex-wrap: wrap;
+
+                & > .form-field {
+                    width: 33%;
+                }
+            }
+
+            .control-panel {
+                display: flex;
+                justify-content: end;
+                padding-bottom: 10px;
+
+                .control-panel-field {
+                    margin-right: 35px;
+                    button {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        .table-section {
+            padding-bottom: 10px;
+
+            .search-panel {
+                & > .uxp-search-box-container > .search-box-container {
+                    margin: 5px;
+                    border-radius: 10px;
+                }
+                .search-form {
+                    display: flex;
+
+                    .search-button {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .control-panel-field {
+                margin-right: 35px;
+                button {
+                    margin-left: 15px;
+                }
+            }
+
+            .data-table {
+                .data-list-item > td {
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

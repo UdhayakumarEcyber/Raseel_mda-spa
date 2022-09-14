@@ -1,0 +1,19 @@
+{
+    "id": "182215d0-c28d-425e-bd0c-e76b9737dce5",
+    "author": "eutech",
+    "widgets": [
+       
+    ],
+    "sidebarLinks": [
+        
+    ],
+    "uis": [
+       {
+           "id": "smart-parking",
+           "label": "Raseel Smart Parking Platform"
+       }
+    ],
+    "menuItems": [
+        
+    ]
+}

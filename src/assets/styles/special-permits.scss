@@ -1,0 +1,147 @@
+.special-permits-modal {
+
+    .modal-panel {
+        min-width: 70%;
+        min-height: 70%;
+        max-height: 85%;
+        max-width: 70%;
+
+        & > .modal-body {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            margin-bottom: 2px;
+
+            .uxp-form-input {
+                font-family: "Comfortaa";
+            }
+
+            .uxp-form-select > .uxp-select-placeholder:not(.active) > div.selected {
+                color: #808080;
+            }
+
+            hr {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .tab-control-bar {
+                width: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                background: #f0f0f0;
+
+                & > .tab-control-button {
+                    border-radius: 0px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    font-size: 12px;
+
+                    &.active {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .tab-panel {
+                & > .title {
+                    padding-left: 30px;
+                    margin-bottom: 0px;
+                    margin-top: 30px;
+                }
+
+                & > .section {
+                    display: flex;
+                    width: 95%;
+                    margin: auto 20px;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-items: flex-start;
+
+                    .title {
+                        margin-top: 20px;
+                        padding-left: 20px;
+                        margin-bottom: 0px;
+                    }
+
+                    .driver-select {
+                        margin: 10px 10px 0;
+                    }
+
+                    .add-button {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        &:first-child {
+                            margin-left: 20px;
+                        }   
+                    }
+
+                    .uxp-button {
+                        margin-left: 15px;
+                        text-decoration: none;
+                        font-size: 11px;
+                        padding: 6px 12px 6px 8px;
+
+                        & > .icon-placeholder {
+                            width: 12px;
+                            height: 12px;
+                            margin-right: 8px;
+                        }
+                    }
+
+                    .form-field-group {
+                        display: flex;
+                        // flex-wrap: wrap;
+                        align-items: flex-start;
+
+                        & > .form-field {
+                            width: 50%;
+                            &.full-width {
+                                width: 100%;
+                            }
+                        }
+
+                        .uxp-form-checkbox > label {
+                            padding: 0px;
+                        }
+
+                        & > .remove-button {
+                            margin-top: 60px;
+                            .uxp-button {
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .controls {
+                        display: flex;
+                        border-top: 1px solid rgba(0, 0, 0, 0.1);
+                        justify-content: end;
+                        width: 100%;
+                        & > .form-field-controls {
+                            button.uxp-button {
+                                border-radius: 10px;
+                                justify-content: center;
+                                margin-left: 10px;
+                                padding: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .control-panel {
+                    display: flex;
+                    justify-content: end;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                    .control-panel-field {
+                        margin-right: 35px;
+                        button {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

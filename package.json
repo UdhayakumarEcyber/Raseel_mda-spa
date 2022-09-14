@@ -1,0 +1,44 @@
+{
+  "scripts": {
+    "build:prod": "webpack --config webpack.config.js --mode production --progress",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "dev": "webpack serve"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "file-saver": "^2.0.5",
+    "leaflet": "^1.7.1",
+    "leaflet-editable": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.8.0",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1",
+    "xlsx": "^0.18.3"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.5",
+    "@types/geojson": "^7946.0.8",
+    "@types/leaflet": "^1.7.9",
+    "@types/leaflet-editable": "^1.2.1",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-leaflet": "^2.8.2",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-transition-group": "^4.4.0",
+    "classnames": "^2.3.1",
+    "css-loader": "^5.2.4",
+    "sass": "^1.38.2",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.3",
+    "svg-url-loader": "^6.0.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
